@@ -1,0 +1,12 @@
+{
+  "appid": "touristappid",
+  "compileType": "game",
+  "libVersion": "latest",
+  "projectname": "Village Merge",
+  "setting": {
+    "es6": true,
+    "minified": true,
+    "postcss": false,
+    "urlCheck": false
+  }
+}

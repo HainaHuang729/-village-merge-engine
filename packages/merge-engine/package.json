@@ -1,0 +1,28 @@
+{
+  "name": "@merge-engine/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./src": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "phaser": ">=3.80.0 <4"
+  },
+  "devDependencies": {
+    "phaser": "3.90.0",
+    "vitest": "^2.1.8"
+  }
+}

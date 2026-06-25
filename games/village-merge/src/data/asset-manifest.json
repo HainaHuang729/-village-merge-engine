@@ -1,0 +1,69 @@
+{
+  "assets": [
+    {
+      "id": "bg_board",
+      "kind": "image",
+      "path": "backgrounds/bg_board.png"
+    },
+    {
+      "id": "bg_village",
+      "kind": "image",
+      "path": "backgrounds/bg_village.png"
+    },
+    {
+      "id": "item_egg",
+      "kind": "image",
+      "path": "items/item_egg.png"
+    },
+    {
+      "id": "item_chick",
+      "kind": "image",
+      "path": "items/item_chick.png"
+    },
+    {
+      "id": "item_chicken",
+      "kind": "image",
+      "path": "items/item_chicken.png"
+    },
+    {
+      "id": "building_chicken_coop",
+      "kind": "image",
+      "path": "buildings/building_chicken_coop.png"
+    },
+    {
+      "id": "village_empty_lot",
+      "kind": "image",
+      "path": "village/village_empty_lot.png"
+    },
+    {
+      "id": "village_chicken_coop",
+      "kind": "image",
+      "path": "village/village_chicken_coop.png"
+    },
+    {
+      "id": "truck_idle",
+      "kind": "image",
+      "path": "truck/truck_idle.png"
+    },
+    {
+      "id": "ui_truck",
+      "kind": "image",
+      "path": "ui/ui_truck.png"
+    },
+    {
+      "id": "ui_cargo_count",
+      "kind": "image",
+      "path": "ui/ui_cargo_count.png"
+    },
+    {
+      "id": "effect_merge_success",
+      "kind": "image",
+      "path": "effects/effect_merge_success_01.png"
+    },
+    {
+      "id": "effect_build_fly",
+      "kind": "image",
+      "path": "effects/effect_build_fly_01.png"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "board": {
+    "id": "village-board",
+    "columns": 6,
+    "rows": 6,
+    "cellSize": 48,
+    "originX": 51,
+    "originY": 260
+  },
+  "truck": {
+    "capacity": 40,
+    "initialCargo": 8,
+    "replenishIntervalMs": 120000,
+    "spawnItemId": "egg"
+  },
+  "village": {
+    "targetBuildingId": "chicken_coop"
+  },
+  "items": [
+    {
+      "id": "egg",
+      "name": "Egg",
+      "icon": "item_egg",
+      "level": 1,
+      "mergeTo": "chick",
+      "tags": ["cargo", "animal"],
+      "category": "animal"
+    },
+    {
+      "id": "chick",
+      "name": "Chick",
+      "icon": "item_chick",
+      "level": 2,
+      "mergeTo": "chicken",
+      "tags": ["animal"],
+      "category": "animal"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken",
+      "icon": "item_chicken",
+      "level": 3,
+      "mergeTo": "chicken_coop",
+      "tags": ["animal"],
+      "category": "animal"
+    },
+    {
+      "id": "chicken_coop",
+      "name": "Chicken Coop",
+      "icon": "building_chicken_coop",
+      "level": 4,
+      "tags": ["building", "final"],
+      "category": "building",
+      "data": {
+        "villageBuildingId": "chicken_coop"
+      }
+    }
+  ],
+  "visuals": {
+    "egg": {
+      "color": 16771355,
+      "label": "EGG",
+      "textColor": "#3a2a16"
+    },
+    "chick": {
+      "color": 16569682,
+      "label": "CHICK",
+      "textColor": "#3a2a16"
+    },
+    "chicken": {
+      "color": 15843691,
+      "label": "HEN",
+      "textColor": "#3b2530"
+    },
+    "chicken_coop": {
+      "color": 12233774,
+      "label": "COOP",
+      "textColor": "#2c2118"
+    }
+  },
+  "mergeRules": [
+    {
+      "id": "egg-egg-to-chick",
+      "from": ["egg", "egg"],
+      "to": "chick",
+      "animation": "merge_pop",
+      "tags": ["mvp-chain"]
+    },
+    {
+      "id": "chick-chick-to-chicken",
+      "from": ["chick", "chick"],
+      "to": "chicken",
+      "animation": "merge_pop",
+      "tags": ["mvp-chain"]
+    },
+    {
+      "id": "chicken-chicken-to-coop",
+      "from": ["chicken", "chicken"],
+      "to": "chicken_coop",
+      "animation": "build_fly",
+      "tags": ["mvp-chain", "final"]
+    }
+  ],
+  "initialItems": [
+    {
+      "configId": "egg",
+      "position": { "x": 0, "y": 0 }
+    },
+    {
+      "configId": "egg",
+      "position": { "x": 1, "y": 0 }
+    },
+    {
+      "configId": "chick",
+      "position": { "x": 0, "y": 1 }
+    },
+    {
+      "configId": "chick",
+      "position": { "x": 1, "y": 1 }
+    }
+  ]
+}

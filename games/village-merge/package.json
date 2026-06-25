@@ -1,0 +1,24 @@
+{
+  "name": "@merge-engine/village-merge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "build:wechat": "vite build --mode wechat",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src tests --ext .ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@merge-engine/core": "workspace:*",
+    "phaser": "3.90.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5",
+    "vitest": "^2.1.8",
+    "typescript": "^5.7.2"
+  }
+}
