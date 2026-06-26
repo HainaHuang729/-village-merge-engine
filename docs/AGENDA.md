@@ -42,6 +42,7 @@
 - 完成鸡舍飞入村庄并永久保存。
 - 完成 Web / 微信运行时存档抽象。
 - 完成 `build:wechat` 构建出口和微信适配说明。
+- 完成 `WECHAT_APPID` 本地注入构建流程，真实 AppID 只进入 ignored `dist/wechat`。
 - 完成 Game 层 TruckSystem、VillageState、内容配置一致性测试。
 - 完成旧 quickstart 清理。
 - 完成自动化 MVP flow 测试和 Playtest 文档。
@@ -60,7 +61,8 @@
 
 - 已加入项目内最小 canvas/DOM adapter。
 - 已避免外部未验证 adapter 依赖。
-- 下一步用微信开发者工具打开 `games/village-merge/dist/wechat`，按报错补齐缺失 API。
+- 已支持用 `WECHAT_APPID` 将真实 AppID 只注入 ignored 构建产物。
+- 下一步用真实本地 AppID 生成 `games/village-merge/dist/wechat` 并在微信开发者工具预览，按报错补齐缺失 API。
 
 ## 暂不处理
 

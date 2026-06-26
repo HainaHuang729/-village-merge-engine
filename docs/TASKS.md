@@ -169,6 +169,7 @@
 - [x] `build:wechat` 复制 `game.json` 和 `project.config.json` 到 `dist/wechat`。
 - [x] 微信构建输出单文件 `game.js`，避免当前阶段拆出 Phaser chunk。
 - [x] 微信构建关闭 Vite modulepreload polyfill。
+- [x] `WECHAT_APPID` 本地注入到 ignored `dist/wechat/project.config.json`，避免真实 AppID 进入仓库。
 - [x] `games/village-merge/wechat/` 适配说明和配置壳。
 - [ ] 微信开发者工具验证最小 adapter 覆盖面。
 - [ ] 根据 DevTools 报错补齐 adapter 缺失 API。

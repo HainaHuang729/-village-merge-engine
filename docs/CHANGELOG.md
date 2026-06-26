@@ -24,6 +24,7 @@
 - Playtest：新增自动化 MVP flow 测试和 `PLAYTEST.md`。
 - Repo hygiene：移除旧微信 quickstart 模板文件和根项目配置，避免混淆 workspace 主线。
 - WeChat adapter：新增项目内最小 canvas/DOM adapter bootstrap 和 adapter 单元测试。
+- WeChat 安全构建：`build:wechat` 支持通过 `WECHAT_APPID` 只向 ignored 构建产物注入本地 AppID。
 - 新增 root `test` 脚本和 `@merge-engine/core` Vitest 配置。
 - 建立 pnpm workspace 文件。
 - 新增 `packages/merge-engine` 可复用引擎包。

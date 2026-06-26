@@ -11,6 +11,7 @@ This folder records the Phase 3 WeChat target shape for `games/village-merge`.
 - `pnpm --filter @merge-engine/village-merge build:wechat` emits `dist/wechat/game.js`.
 - `build:wechat` copies `game.json` and `project.config.json` into `dist/wechat`.
 - The shared config uses `touristappid`; real AppID belongs in local private DevTools config.
+- A real AppID can be injected only into ignored build output with `WECHAT_APPID=wx... pnpm --filter @merge-engine/village-merge build:wechat`.
 - `src/platform/wechat-adapter.ts` installs a minimal canvas/DOM shim before Phaser starts.
 
 ## Not Yet A Final WeChat Release
@@ -22,3 +23,13 @@ Do not replace it with a random community adapter until it has been verified aga
 ## Validation Target
 
 For this phase, the target is not App Store quality. The target is that game code no longer assumes Web-only storage/input/resource paths, so the real WeChat adapter can be added without rewriting gameplay systems.
+
+## Local AppID Workflow
+
+The committed `wechat/project.config.json` must keep `touristappid`. For local DevTools preview, run:
+
+```bash
+WECHAT_APPID=wx_your_local_appid pnpm --filter @merge-engine/village-merge build:wechat
+```
+
+This writes the AppID only to `dist/wechat/project.config.json`. The `dist/` directory is ignored and must not be committed.

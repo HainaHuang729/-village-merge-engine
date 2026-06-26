@@ -121,4 +121,5 @@
 
 - `build:wechat` 会输出 `dist/wechat/game.js` 并复制微信配置。
 - 项目内最小 canvas/DOM adapter 已接入。
-- 下一步需要微信开发者工具验证，记录 Phaser 仍触达的缺失 API。
+- `WECHAT_APPID` 可只向 ignored `dist/wechat/project.config.json` 注入本地真实 AppID。
+- 下一步需要微信开发者工具预览验证，记录 Phaser 仍触达的缺失 API。

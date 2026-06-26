@@ -5,7 +5,7 @@ This repository must not contain production credentials or real platform identif
 ## WeChat
 
 - Commit `touristappid` in shared project config.
-- Keep the real WeChat AppID in local WeChat DevTools private settings.
+- Keep the real WeChat AppID in local WeChat DevTools private settings or inject it only into ignored build output with `WECHAT_APPID=... pnpm --filter @merge-engine/village-merge build:wechat`.
 - Never commit AppSecret.
 - If GitHub reports an AppID alert, replace the value, rewrite the affected public history if needed, and rotate any paired AppSecret in the WeChat console.
 
