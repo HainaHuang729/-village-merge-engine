@@ -24,6 +24,7 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'chunks/[name]-[hash].js',
         entryFileNames: mode === 'wechat' ? 'game.js' : 'assets/[name]-[hash].js',
+        inlineDynamicImports: mode === 'wechat',
         manualChunks: mode === 'wechat' ? undefined : { phaser: ['phaser'] },
       },
     },

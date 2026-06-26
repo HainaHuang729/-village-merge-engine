@@ -11,10 +11,10 @@ await mkdir(dist, { recursive: true });
 await copyFile(sourceConfig, resolve(dist, 'project.config.json'));
 await copyFile(sourceGameConfig, resolve(dist, 'game.json'));
 await writeFile(
-  resolve(dist, 'WECHAT_ADAPTER_REQUIRED.txt'),
+  resolve(dist, 'WECHAT_RUNTIME_NOTES.txt'),
   [
-    'This build is a WeChat target bundle, not a final runnable WeChat package by itself.',
-    'Phaser still needs a WeChat Mini Game canvas/DOM adapter loaded before game.js.',
+    'This build includes a minimal project-local WeChat canvas/DOM adapter bootstrap.',
+    'The adapter is installed before Phaser starts, but it still needs WeChat DevTools and real-device validation.',
     'Keep real AppID values in local private DevTools config, not in this repository.',
     '',
   ].join('\n'),

@@ -11,12 +11,13 @@ This folder records the Phase 3 WeChat target shape for `games/village-merge`.
 - `pnpm --filter @merge-engine/village-merge build:wechat` emits `dist/wechat/game.js`.
 - `build:wechat` copies `game.json` and `project.config.json` into `dist/wechat`.
 - The shared config uses `touristappid`; real AppID belongs in local private DevTools config.
+- `src/platform/wechat-adapter.ts` installs a minimal canvas/DOM shim before Phaser starts.
 
 ## Not Yet A Final WeChat Release
 
-The current build is still Phaser + Vite first. A production WeChat package still needs a canvas/DOM adapter loaded before `game.js`, final DevTools project wiring, subpackage policy, and device QA.
+The current build is still Phaser + Vite first. A project-local minimal adapter is now included, but a production WeChat package still needs DevTools validation, real-device QA, and possibly a fuller adapter if Phaser touches APIs that the minimal shim does not cover.
 
-Do not add a random community adapter until it has been verified against Phaser 3.90 and the target WeChat base library. The adapter must provide the browser APIs Phaser touches, including canvas, image/audio loading, timing, event dispatch, and enough DOM shims for the bundled runtime.
+Do not replace it with a random community adapter until it has been verified against Phaser 3.90 and the target WeChat base library. The adapter must provide the browser APIs Phaser touches, including canvas, image/audio loading, timing, event dispatch, and enough DOM shims for the bundled runtime.
 
 ## Validation Target
 

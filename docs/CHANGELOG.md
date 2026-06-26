@@ -23,6 +23,7 @@
 - Game 层测试：新增 TruckSystem、VillageState、内容配置一致性测试。
 - Playtest：新增自动化 MVP flow 测试和 `PLAYTEST.md`。
 - Repo hygiene：移除旧微信 quickstart 模板文件和根项目配置，避免混淆 workspace 主线。
+- WeChat adapter：新增项目内最小 canvas/DOM adapter bootstrap 和 adapter 单元测试。
 - 新增 root `test` 脚本和 `@merge-engine/core` Vitest 配置。
 - 建立 pnpm workspace 文件。
 - 新增 `packages/merge-engine` 可复用引擎包。
@@ -55,6 +56,7 @@
 - `games/village-merge/vite.config.ts` 增加 root `assets/` 静态资源接入、Phaser chunk 拆分和微信模式输出。
 - Root `test` 脚本改为递归执行所有 workspace 包测试。
 - `build:wechat` 改为复制微信配置到 `dist/wechat`，并在微信模式下避免 Phaser chunk 拆分和 modulepreload polyfill。
+- `src/main.ts` 改为先安装微信 adapter，再动态启动 Phaser game。
 - `BOARD.md`、`MERGE.md`、`SAVE.md` 更新 Phase 2 状态。
 - `EVENTS.md` 和 `TASKS.md` 更新 Phase 3 状态。
 - `TASKS.md` 更新 Phase 2 完成状态。

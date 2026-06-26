@@ -56,6 +56,12 @@
 4. 根据 Review 调整拆货爽感和村庄反馈。
 5. Decide 是否迁移 root `assets/` 到 `games/village-merge/assets/`。
 
+## 当前微信适配状态
+
+- 已加入项目内最小 canvas/DOM adapter。
+- 已避免外部未验证 adapter 依赖。
+- 下一步用微信开发者工具打开 `games/village-merge/dist/wechat`，按报错补齐缺失 API。
+
 ## 暂不处理
 
 - 不做第二条 Merge 链。

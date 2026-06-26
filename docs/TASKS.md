@@ -161,6 +161,8 @@
 - [x] 微信运行时检测。
 - [x] `wx.*StorageSync` 存档分支。
 - [x] `wx.getSystemInfoSync()` 平台信息分支。
+- [x] 项目内最小微信 canvas/DOM adapter bootstrap。
+- [x] Adapter 单元测试：安装 browser-like globals 和触摸转发入口。
 - [x] Touch action CSS 约束。
 - [x] Vite 静态资源目录接入 root `assets/`。
 - [x] `build:wechat` 构建命令。
@@ -168,7 +170,9 @@
 - [x] 微信构建输出单文件 `game.js`，避免当前阶段拆出 Phaser chunk。
 - [x] 微信构建关闭 Vite modulepreload polyfill。
 - [x] `games/village-merge/wechat/` 适配说明和配置壳。
-- [ ] 正式 Phaser 微信 canvas adapter。
+- [ ] 微信开发者工具验证最小 adapter 覆盖面。
+- [ ] 根据 DevTools 报错补齐 adapter 缺失 API。
+- [ ] 评估是否仍需要替换为正式第三方 Phaser adapter。
 - [ ] 微信开发者工具真机预览。
 
 ## Repository Hygiene

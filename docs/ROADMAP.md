@@ -120,4 +120,5 @@
 当前状态：
 
 - `build:wechat` 会输出 `dist/wechat/game.js` 并复制微信配置。
-- 真实 canvas/DOM adapter 尚未接入。
+- 项目内最小 canvas/DOM adapter 已接入。
+- 下一步需要微信开发者工具验证，记录 Phaser 仍触达的缺失 API。
