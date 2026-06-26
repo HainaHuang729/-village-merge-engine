@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "build:wechat": "vite build --mode wechat",
+    "build:wechat": "vite build --mode wechat && node scripts/prepare-wechat-build.mjs",
     "preview": "vite preview --host 0.0.0.0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "eslint src tests --ext .ts",

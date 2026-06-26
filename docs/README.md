@@ -21,6 +21,7 @@
 5. [ENGINE_ARCHITECTURE.md](ENGINE_ARCHITECTURE.md)：Engine + Game 技术边界。
 6. [SYSTEM_DESIGN.md](SYSTEM_DESIGN.md)：当前系统分层。
 7. [MVP.md](MVP.md)：鸡舍闭环验证范围。
+8. [PLAYTEST.md](PLAYTEST.md)：MVP playtest 检查和风险。
 
 如果旧文档和以上文档冲突，以上文档优先。
 
@@ -61,6 +62,8 @@
 - [ASSET_GUIDE.md](ASSET_GUIDE.md)：资源命名、尺寸、格式、目录和替换规范
 - [ASSET_LIST.md](ASSET_LIST.md)：当前资源与后续资源清单，含 AI Prompt
 - [STYLE_GUIDE.md](STYLE_GUIDE.md)：整体视觉、色彩、线条、动画和 UI 风格
+- [PLAYTEST.md](PLAYTEST.md)：自动化 MVP flow 与手玩检查清单
+- [SECRETS.md](SECRETS.md)：AppID、AppSecret 和本地配置规范
 - [TASKS.md](TASKS.md)：任务拆分与优先级
 - [CHANGELOG.md](CHANGELOG.md)：变更记录
 - [DECISIONS.md](DECISIONS.md)：关键决策记录
@@ -68,4 +71,10 @@
 
 ## 当前状态
 
-Phase 1 已建立 workspace、Engine 架构文档、基础类型、Manager 壳和 Village Merge Demo 壳。下一步需要 Review 后再补依赖安装和更完整的交互实现。
+当前已完成 workspace、Reusable Merge Engine、Village Merge MVP、Game 层测试、自动化 MVP flow 测试和微信构建骨架。
+
+下一步需要：
+
+1. 选择并验证 Phaser 微信小游戏 canvas/DOM adapter。
+2. 用微信开发者工具做真机预览。
+3. 手玩 10 分钟检查村庄反馈是否足够有记忆点。

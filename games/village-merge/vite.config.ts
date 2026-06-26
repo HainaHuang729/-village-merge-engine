@@ -16,15 +16,15 @@ export default defineConfig(({ mode }) => ({
   build: {
     assetsInlineLimit: 0,
     chunkSizeWarningLimit: 1800,
+    cssCodeSplit: mode !== 'wechat',
+    modulePreload: mode === 'wechat' ? { polyfill: false } : true,
     outDir: mode === 'wechat' ? 'dist/wechat' : 'dist',
     rollupOptions: {
       output: {
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'chunks/[name]-[hash].js',
         entryFileNames: mode === 'wechat' ? 'game.js' : 'assets/[name]-[hash].js',
-        manualChunks: {
-          phaser: ['phaser'],
-        },
+        manualChunks: mode === 'wechat' ? undefined : { phaser: ['phaser'] },
       },
     },
     sourcemap: mode !== 'wechat',

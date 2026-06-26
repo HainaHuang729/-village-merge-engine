@@ -29,6 +29,8 @@ pnpm-debug.log*
 # WeChat DevTools local/private settings
 project.private.config.json
 *.private.config.json
+project.config.local.json
+*.local.config.json
 
 # Editor metadata
 .idea/

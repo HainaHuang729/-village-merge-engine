@@ -1,8 +1,8 @@
-# Reusable Merge Engine
+# Village Merge Engine
 
-This project is a reusable TypeScript Merge game engine built with Phaser 3, Vite, and pnpm workspace.
+Reusable TypeScript Merge game engine built with Phaser 3, Vite, and pnpm workspace.
 
-Village Merge is only the first demo game. The engine must stay independent from any specific game theme, economy, story, item chain, or UI.
+Village Merge is the first playable demo game. The engine must stay independent from any specific game theme, economy, story, item chain, or UI.
 
 ## Architecture
 
@@ -13,9 +13,11 @@ project/
 ├── games/
 │   └── village-merge/       # Demo game shell
 ├── docs/                    # Architecture and design docs
-├── assets/                  # Existing placeholder assets, to be moved under game ownership later
+├── assets/                  # Placeholder assets served by the demo build
 └── tools/                   # Utility scripts
 ```
+
+The legacy WeChat quickstart files have been removed from the repository. New work should use the workspace entry points above.
 
 ## Engine Owns
 
@@ -54,25 +56,37 @@ project/
 - ESLint
 - Prettier
 
-Note: `pnpm` is not currently installed on this machine. The workspace files are ready; dependency installation is the next verification step.
-
 ## Commands
 
-After installing pnpm and dependencies:
-
 ```bash
-pnpm install
-pnpm dev
-pnpm build
-pnpm typecheck
-pnpm lint
+npx pnpm@9.15.0 install
+npx pnpm@9.15.0 dev
+npx pnpm@9.15.0 typecheck
+npx pnpm@9.15.0 lint
+npx pnpm@9.15.0 test
+npx pnpm@9.15.0 build
+npx pnpm@9.15.0 --filter @merge-engine/village-merge build:wechat
 ```
 
-The demo game lives at:
+The local playable demo runs at:
 
 ```text
-games/village-merge
+http://localhost:5173/
 ```
+
+Current MVP loop:
+
+```text
+Truck cargo -> Open cargo -> Egg -> Chick -> Chicken -> Chicken Coop -> Village
+```
+
+## Secrets
+
+Do not commit a real WeChat AppID or AppSecret.
+
+- Committed WeChat config uses `touristappid`.
+- Personal WeChat DevTools settings belong in ignored local files such as `project.private.config.json`.
+- See [SECRETS.md](docs/SECRETS.md).
 
 ## Documentation
 
@@ -88,3 +102,4 @@ Start here:
 - [SCENE.md](docs/SCENE.md)
 - [PLUGIN.md](docs/PLUGIN.md)
 - [ROADMAP.md](docs/ROADMAP.md)
+- [SECRETS.md](docs/SECRETS.md)

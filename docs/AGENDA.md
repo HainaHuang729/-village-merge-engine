@@ -43,17 +43,18 @@
 - 完成 Web / 微信运行时存档抽象。
 - 完成 `build:wechat` 构建出口和微信适配说明。
 - 完成 Game 层 TruckSystem、VillageState、内容配置一致性测试。
+- 完成旧 quickstart 清理。
+- 完成自动化 MVP flow 测试和 Playtest 文档。
 
 ## 下一步
 
 等待 Review。建议下一轮进入：
 
-1. 手玩 Review：10 分钟内能否自然完成鸡舍。
-2. 决定微信正式适配器方案。
-3. Decide 是否保留旧 quickstart 微信小游戏文件。
-4. Decide 是否迁移 root `assets/` 到 `games/village-merge/assets/`。
-5. 根据 Review 调整拆货爽感和村庄反馈。
-6. 接入正式 Phaser 微信 canvas adapter。
+1. 决定微信正式适配器方案。
+2. 微信开发者工具真机预览。
+3. 手玩 Review：10 分钟内能否自然完成鸡舍。
+4. 根据 Review 调整拆货爽感和村庄反馈。
+5. Decide 是否迁移 root `assets/` 到 `games/village-merge/assets/`。
 
 ## 暂不处理
 

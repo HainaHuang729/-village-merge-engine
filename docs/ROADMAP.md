@@ -104,6 +104,7 @@
 - 已完成一条鸡舍 Merge 链。
 - 已完成货车拆货和村庄交付。
 - 已完成 Web / 微信存档分支。
+- 已完成自动化 MVP flow 测试。
 
 ## Phase 7 - WeChat Adapter Review
 
@@ -115,3 +116,8 @@
 - 验证 `dist/wechat/game.js` 的入口策略。
 - 真机测试触摸、音频、存档和资源加载。
 - 评估首包体积和分包策略。
+
+当前状态：
+
+- `build:wechat` 会输出 `dist/wechat/game.js` 并复制微信配置。
+- 真实 canvas/DOM adapter 尚未接入。

@@ -154,6 +154,7 @@
 - [x] Game 层测试：TruckSystem。
 - [x] Game 层测试：VillageState。
 - [x] Game 层测试：内容配置一致性。
+- [x] 自动化 MVP flow 测试：初始棋盘 + 货车货物可以完成鸡舍并进入村庄。
 
 ## P3 - WeChat Mini Game Prep
 
@@ -163,6 +164,16 @@
 - [x] Touch action CSS 约束。
 - [x] Vite 静态资源目录接入 root `assets/`。
 - [x] `build:wechat` 构建命令。
+- [x] `build:wechat` 复制 `game.json` 和 `project.config.json` 到 `dist/wechat`。
+- [x] 微信构建输出单文件 `game.js`，避免当前阶段拆出 Phaser chunk。
+- [x] 微信构建关闭 Vite modulepreload polyfill。
 - [x] `games/village-merge/wechat/` 适配说明和配置壳。
 - [ ] 正式 Phaser 微信 canvas adapter。
 - [ ] 微信开发者工具真机预览。
+
+## Repository Hygiene
+
+- [x] 移除旧微信 quickstart 模板文件。
+- [x] 移除旧根 `audio/`、`images/`、`js/`。
+- [x] 移除根 `project.config.json`，避免再次提交真实 AppID。
+- [x] 新增 Secrets 文档。
